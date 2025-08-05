@@ -419,13 +419,13 @@ const Questionnaire = ({ question, onAnswer, questionIndex, totalQuestions }) =>
 
   return (
     <motion.div
-      key={question.id}
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -50 }}
-      transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-      className="w-full max-w-2xl mx-auto px-4 flex flex-col justify-center items-center h-full absolute"
-    >
+  key={question.id}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{ duration: 0.7, ease: "easeInOut" }}
+  className="w-full max-w-2xl mx-auto px-4 flex flex-col justify-center items-center"
+>
       <div className="w-full">
         <div className="w-full bg-black/5 rounded-full h-1.5 mb-8">
             <motion.div 
