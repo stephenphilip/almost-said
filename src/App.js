@@ -129,7 +129,8 @@ const results = {
     title: "The Foundation That Feels Like Home",
     content: [
       "You probably don’t think of yourself as \"perfect at relationships\" — and that’s the point. You care, listen, and navigate tough moments without spiraling. You trust your gut. You give space without fearing loss. And when things wobble, you don’t interpret it as doom.",
-      "This quiet confidence you carry? It’s the mark of what psychologists call a Secure attachment style. Whether you learned it from consistent caregiving or earned it through personal healing, it shows up in how calmly you give and receive love."
+      "This quiet confidence you carry? It’s the mark of what psychologists call a Secure attachment style. Whether you learned it from consistent caregiving or earned it through personal healing, it shows up in how calmly you give and receive love.",
+      "If this feels familiar: Keep anchoring in that steadiness. Let others catch your calm. And when life throws a wobble, remind yourself: it's okay not to have it all figured out — trust helps you figure it out together."
     ],
     reflections: [
       "Comfort with closeness and independence",
@@ -145,8 +146,9 @@ const results = {
   Anxious: {
     title: "Caring Deeply, Hurting Quietly",
     content: [
-      "You often give first, feel more, and notice subtleties others miss — a tone, a delay, a sigh. But behind that care is often a hum of worry: Am I too much? Will they leave? Did I mess up again?",
-      "That emotional attunement is beautiful — but when it comes with fear of abandonment, it's a clue. These are the patterns of an Anxious attachment style, shaped by experiences where connection didn’t always feel certain or safe."
+      "There’s a part of you that loves with your whole heart. That checks in first, that notices the change in tone, that remembers the small things. And yet, under all that care is a quiet worry: Will they pull away? Did I do something wrong?",
+      "You probably find yourself overthinking texts, wondering if you were \"too much,\" and giving more just to feel close. Not because you’re clingy. But because love has often felt like something that could slip through your fingers if you didn’t hold on tight enough.",
+      "If this feels familiar: Be gentle with the part of you that learned to chase connection. Your care is a gift. It just needs to be rooted inward before outward."
     ],
     reflections: [
       "Overthinking after silence",
@@ -228,7 +230,7 @@ const results = {
     ]
   },
   'Avoidant-Secure': {
-    title: "Steady, But Still Private",
+    title: "Solid, But Still Guarded",
     content: [
       "You’re probably the one who keeps calm during chaos, respects boundaries, and knows how to take care of yourself. But when someone gets emotionally close — you might feel unsure, awkward, or even slightly cornered.",
       "This is the hallmark of a Secure-Avoidant style: a healthy base, with a few cautious edges still protecting your heart."
@@ -247,8 +249,9 @@ const results = {
   'Fearful-Secure': {
     title: "Mostly Safe, Still Startled",
     content: [
-      "You’ve done deep work. You likely have healthy relationships and emotional tools. But occasionally, you still flinch — not always outwardly, but in your chest. You might hear a “They’ll leave” whisper from the past, even in moments of present love.",
-      "This is a Secure-Fearful attachment style — you’ve built security, but some scars still echo."
+      "You've done the work. You likely have relationships where you feel seen, valued, and steady. But sometimes, out of nowhere, something small can stir up old panic. Maybe a delayed text, a weird look, or a partner's quietness.",
+      "You know how to respond well, but sometimes your body still reacts like it’s back in the old story.",
+      "If this feels familiar: You’re not failing. You’re integrating. You’re allowed to feel both the healing and the ache."
     ],
     reflections: [
       "Sudden mistrust when nothing's wrong",
@@ -278,7 +281,7 @@ const results = {
       "Let slow, safe connection be the medicine — not intensity"
     ]
   },
-    'Avoidant-Fearful': {
+  'Avoidant-Fearful': {
     title: "Quiet Walls, Soft Heart",
     content: [
       "You don’t always show it. You might appear distant, detached, or self-reliant. But inside, there’s a tender core that craves closeness — even if it doesn’t feel safe to ask for it.",
@@ -296,7 +299,6 @@ const results = {
     ]
   }
 };
-
 
 // --- COMPONENT: CustomStyles ---
 // This component injects global styles for fonts.
@@ -390,7 +392,7 @@ const IntroScreen = ({ onStart }) => {
       <div className="space-y-5 text-slate-700 text-base md:text-lg leading-relaxed">
         <p>
           Relationships can sometimes feel off, but it’s hard to say exactly why.
-          Maybe you're in something that looks okay from the outside — but inside, it’s heavier. Or quieter. Or just… harder than you expected.
+          Maybe you're in something that looks okay from the outside — but on the inside it feels heavier...or quieter. Or just… harder than you expected.
         </p>
         <p>
           Maybe you’re not sure how close you really want to be. Or you’re always the one caring more. Or you’re somewhere in between — holding it all in, wondering if it’s just you.
@@ -419,13 +421,13 @@ const Questionnaire = ({ question, onAnswer, questionIndex, totalQuestions }) =>
 
   return (
     <motion.div
-  key={question.id}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  exit={{ opacity: 0 }}
-  transition={{ duration: 0.7, ease: "easeInOut" }}
-  className="w-full max-w-2xl mx-auto px-4 flex flex-col justify-center items-center"
->
+      key={question.id}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="w-full max-w-2xl mx-auto px-4 flex flex-col justify-center items-center"
+    >
       <div className="w-full">
         <div className="w-full bg-black/5 rounded-full h-1.5 mb-8">
             <motion.div 
